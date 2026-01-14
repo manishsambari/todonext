@@ -1,4 +1,4 @@
-import AddTodo from "@/components/add-todo";
+import AddTodo from "@/components/addTodo";
 import {Todos} from "@/components/todos";
 import Navbar from "@/components/navbar";
 import "./globals.css";
