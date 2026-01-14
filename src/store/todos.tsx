@@ -26,7 +26,7 @@ export function TodosProvider({children}: { children: ReactNode }) {
         try{
         const newTodos = localStorage.getItem('todos') || "[]";
         return JSON.parse(newTodos) as Todo[]
-        }catch (e) {
+        }catch {
             return []
         }
 
@@ -77,7 +77,6 @@ export function TodosProvider({children}: { children: ReactNode }) {
     }
 
     return (
-        // @ts-ignore
         <todosContext.Provider value={{todos, handleAddTodo, toggleTodoAsCompleted, handleDeleteTodo}}>
             {children}
         </todosContext.Provider>
