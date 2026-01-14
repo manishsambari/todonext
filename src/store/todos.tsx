@@ -9,7 +9,6 @@ export type Todo = {
     createdAt: Date;
 }
 
-//thapa technical
 
 export type TodosContext = {
     todos: Todo[];
@@ -78,6 +77,7 @@ export function TodosProvider({children}: { children: ReactNode }) {
     }
 
     return (
+        // @ts-ignore
         <todosContext.Provider value={{todos, handleAddTodo, toggleTodoAsCompleted, handleDeleteTodo}}>
             {children}
         </todosContext.Provider>
